@@ -1,4 +1,4 @@
-# pub_dev_binary_codec
+# binary_codec
 Dart library for converting standard data types to a binary format and back
 
 Supported datatypes: Null, bool, double, int, Uint8List, String, Map, List. Maps and Lists may contain any of the supported datatypes as keys and values.
