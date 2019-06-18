@@ -71,7 +71,9 @@ class Decoder extends Converter<Uint8List, dynamic> {
 
   double decodeDouble(ByteReader reader) {
     var bytes = reader.readAll(8);
-    return bytes.buffer.asByteData(bytes.offsetInBytes, 8).getFloat64(0, Endian.little);
+    return bytes.buffer
+        .asByteData(bytes.offsetInBytes, 8)
+        .getFloat64(0, Endian.little);
   }
 
   int decodeLength(ByteReader reader) {

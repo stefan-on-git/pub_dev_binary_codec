@@ -7,3 +7,7 @@ Not safe, don't use them.
 Forgot the CHANGELOG.md :)
 Now I've rewritten all the code, so it makes more sense, and does more of the things we expect it to do.
 Changed the license to MIT since there are some hours invested in this code know.
+
+# 2.0.2
+
+run formatter

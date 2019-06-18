@@ -25,7 +25,8 @@ class ByteReader {
 
   Uint8List readAll(int byteCount) {
     _require(byteCount);
-    var result = Uint8List.view(_data.buffer, _data.offsetInBytes + _index, byteCount);
+    var result =
+        Uint8List.view(_data.buffer, _data.offsetInBytes + _index, byteCount);
     _index += byteCount;
     return result;
   }
