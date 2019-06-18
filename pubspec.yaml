@@ -4,7 +4,7 @@ description: Dart library for converting standard data types to a binary format 
 
 author: Stefan Zemljic <stefan.zemljic@gmx.ch>
 
-version: 2.0.1
+version: 2.0.2
 
 repository: https://github.com/stefan-on-git/pub_dev_binary_codec
 
