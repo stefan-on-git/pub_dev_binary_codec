@@ -1,0 +1,14 @@
+name: binary_codec
+
+description: Dart library for converting standard data types to a binary format and back
+
+author: Stefan Zemljic <stefan.zemljic@gmx.ch>
+
+version: 2.0.1
+
+repository: https://github.com/stefan-on-git/pub_dev_binary_codec
+
+homepage: https://pub.dev/packages/binary_codec
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
