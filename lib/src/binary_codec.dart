@@ -59,12 +59,12 @@ class Decoder extends Converter<Uint8List, dynamic> {
     int byteCountMinusOne = tag - Tags.vInt;
     var value = 0;
     for (int i = 0; i < byteCountMinusOne; i++) {
-      value += pow(2, i * 8) * reader.read();
+      value += pow(2, i * 8) * reader.read() as int;
     }
     var last = reader.read();
-    value += pow(2, byteCountMinusOne * 8) * (last & 0x7F);
+    value += pow(2, byteCountMinusOne * 8) * (last & 0x7F) as int;
     if (last & 0x80 != 0) {
-      value -= pow(2, byteCountMinusOne * 8 + 7);
+      value -= pow(2, byteCountMinusOne * 8 + 7) as int;
     }
     return value;
   }
@@ -107,7 +107,7 @@ class Decoder extends Converter<Uint8List, dynamic> {
 
   List decodeList(ByteReader reader) {
     int length = decodeLength(reader);
-    var list = List();
+    var list = [];
     for (int i = 0; i < length; i++) {
       list.add(decode(reader));
     }
@@ -200,7 +200,7 @@ class Encoder extends Converter<dynamic, Uint8List> {
   }
 
   void encodeText(String value, ByteWriter writer) {
-    encodeData(utf8.encode(value), true, writer);
+    encodeData(utf8.encode(value) as Uint8List, true, writer);
   }
 
   void encodeData(Uint8List value, bool isText, ByteWriter writer) {
